@@ -3,13 +3,15 @@ import Smposter from "./components/SmPoster.vue"
 import Nav from "./components/Nav.vue"
 import Banner from "./components/banner.vue"
 import Sorting from "./components/Sorting.vue"
+import CardContainer from "./components/CardContainer.vue"
 
 export default {
   components:{
     Smposter,
     Nav,
     Banner,
-    Sorting
+    Sorting,
+    CardContainer
   }
 }
 
@@ -23,6 +25,7 @@ export default {
   <Nav/>
   <Banner/>
   <Sorting/>
+  <CardContainer/>
 </div>
   
 
