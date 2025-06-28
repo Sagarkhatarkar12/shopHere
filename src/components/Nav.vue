@@ -1,4 +1,6 @@
 <script >
+import { RouterLink } from 'vue-router';
+
 </script>
 <template>
 <div class="flex items-center justify-between font-semibold  w-full px-10 h-20 ">
@@ -9,10 +11,12 @@
     <img  class="h-9" src="../assets/folder.png" alt="">
     <p class="font-bold  text-3xl text-green-900">Shopcart</p>
   </div>
-    <div class="flex  gap-1 items-center">
+  <RouterLink to ="/categories">
+    <div class="flex cursor-pointer gap-1 items-center">
          <p>Categories</p>
          <span class=""><i class="ri-arrow-up-s-line"></i></span>
     </div>
+    </RouterLink>
     <div class="flex">
         <p>Deals</p>
     </div>

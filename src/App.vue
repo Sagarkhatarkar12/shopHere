@@ -23,9 +23,11 @@ export default {
 <div class="home">
 <smposter/>
   <Nav/>
-  <Banner/>
-  <Sorting/>
-  <CardContainer/>
+  <!-- <Banner/> -->
+  <!-- <Sorting/>
+   
+  <CardContainer/> -->
+   <router-view />
 </div>
   
 

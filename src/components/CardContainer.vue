@@ -5,7 +5,7 @@
         </div>
         <div class="flex  h-full w-360 mx-10 my-10 gap-10 py-10 custom-scrollbar overflow-scroll">
 
-      <card v-for="item in products" :key = item.id :prouductName="item.title" :brandName="item.brand" :star="Math.round(item.rating)" :amoundValue="item.price"    :imageUrl="item.thumbnail" />
+      <card v-for="item in products" :key = item.id :id = item.id :prouductName="item.title" :brandName="item.brand" :star="Math.round(item.rating)" :amoundValue="item.price"    :imageUrl="item.thumbnail" />
     
 
  
