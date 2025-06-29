@@ -1,6 +1,6 @@
 <template>
     <RouterLink :to="'/product/'+ id">
-            <div class="flex flex-col flex-shrink-0 w-80 h-120 hover:shadow-2xl hover:border-2 border-black hover:bg-gray-200 cursor-pointer rounded-2xl">
+            <div class="flex flex-col flex-shrink-0 w-80 h-120 hover:shadow-2xl  border-black hover:bg-gray-200 cursor-pointer rounded-2xl">
 
         <div class="flex w-full h-[65%]  ">
             <div class="h-full w-full rounded-2xl overflow-hidden">

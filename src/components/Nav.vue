@@ -5,12 +5,14 @@ import { RouterLink } from 'vue-router';
 <template>
 <div class="flex items-center justify-between font-semibold  w-full px-10 h-20 ">
 
+    <div class="flex items-center   gap-6">
+    <RouterLink to="/">
 
-<div class="flex items-center  gap-6">
-    <div class="flex items-center gap-2">
+    <div class="flex items-center cursor-pointer gap-2">
     <img  class="h-9" src="../assets/folder.png" alt="">
     <p class="font-bold  text-3xl text-green-900">Shopcart</p>
   </div>
+      </RouterLink>
   <RouterLink to ="/categories">
     <div class="flex cursor-pointer gap-1 items-center">
          <p>Categories</p>

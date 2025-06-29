@@ -12,7 +12,8 @@ export default {
     Banner,
     Sorting,
     CardContainer
-  }
+  },
+ 
 }
 
 </script>
@@ -21,6 +22,7 @@ export default {
 
 
 <div class="home">
+ 
 <smposter/>
   <Nav/>
   <!-- <Banner/> -->
