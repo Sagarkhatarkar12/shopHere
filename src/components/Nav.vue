@@ -35,10 +35,12 @@ import { RouterLink } from 'vue-router';
         <span class="h-full w-10 flex items-center justify-center cursor-pointe"><i class="ri-search-line"></i></span>
 
     </div>
+    <RouterLink to="/account">
      <div class="flex cursor-pointer  gap-1 items-center">
          <span class=""><i class="ri-user-3-line"></i></span>
-         <p>Profile</p>
+         <p>Account</p>
     </div>
+    </RouterLink>
      <div class="flex cursor-pointer  gap-1 items-center">
          <span class=""><i class="ri-shopping-cart-2-line"></i></span>
          <p>Profile</p>

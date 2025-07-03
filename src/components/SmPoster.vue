@@ -35,5 +35,5 @@ export default {
 
 </template>
 <style scoped>
-/* @import "tailwindcss"; */
+
 </style>

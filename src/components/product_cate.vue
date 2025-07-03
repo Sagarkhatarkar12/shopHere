@@ -3,14 +3,11 @@
         <h1 class="py-5 font-bold text-3xl">Populor Categories</h1>
         <hr>
         <div class="flex gap-5 py-20 flex-wrap items-center justify-center h-full">
+
             <div v-for="(item,index) in categories" :key="index" class="h-20 w-100 bg-gray-300 flex items-center gap-4 px-5 rounded-2xl font-bold font-sans">
-                <div class="h-16 w-16 rounded-2xl bg-white flex items-center justify-center">
-                    <!-- {{ item.url }} -->
-                    <img class="h-full w-full" :src= item.url  alt="">
-                </div>
-                <div>
-                    <h1>{{ item.name }}</h1>
-                </div>
+        <!-- {{ item.name }} -->
+                    <!-- <img class="h-16 w-16 rounded-2xl bg-white flex items-center justify-center" :src="item.url" alt=""> -->
+               <catelayout :Name = "item.name" :slug="item.slug" />
 
 
             </div>
@@ -19,10 +16,16 @@
 
 </template>
 <script>
+import catelayout from './catelayout.vue';
 export default {
+    components: {
+        catelayout
+    },
     data() {
         return {
             categories: []
+            ,
+            // cate : this.$route.fullPath
         }
     },
     mounted() {
