@@ -49,8 +49,7 @@ export default {
                 return;
             }
             this.useAuth.login(this.email, this.pass);
-            //   authStore.Logout();
-            router.push('/account');
+            
 
             // Here you can add your login logic, e.g., API call
 

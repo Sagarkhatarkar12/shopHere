@@ -29,13 +29,19 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+// Global Navigation Guard
+
 router.beforeEach((to, from, next) => {
   const authStore = useAuthStore();
   const { isAuthenticated } = storeToRefs(authStore);
  if (to.meta.requiresAuth && !isAuthenticated.value) {
     next('/login');
-  } else {
+  }  if (to.path === '/login' && isAuthenticated.value) {
+    next('/account'); 
+  }
+  else {
     next(); // ✅ Always call next()
   }
+    return true
 });
 export default router;

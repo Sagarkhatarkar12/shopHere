@@ -2,7 +2,6 @@ import { defineStore } from "pinia";
 export const useAuthStore = defineStore("auth", {
   state: () => ({
     user: null,
-
     isAuthenticated: false,
     token: null,
   }),
@@ -21,23 +20,18 @@ export const useAuthStore = defineStore("auth", {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log("Login response", data);
-            // if (data.firstName === username && data.password === password) {
-              // console.log(response)
-              //  token = data.accessToken;
-              if (data && data.accessToken) {
-                this.user = data;
-                this.token = data.accessToken;
-                this.isAuthenticated = true;
-                // Store token and user data in localStorage
-                localStorage.setItem("auth_token", data.accessToken);
-                localStorage.setItem("auth_user",
-                  JSON.stringify(this.user) // Store user data in localStorage
-                );
-              } else {
-                throw new Error("Invalid credentials");
-              }
-            
+ 
+            if (data && data.accessToken) {
+              this.user = data;
+              this.token = data.accessToken;
+              this.isAuthenticated = true;
+              // Store token and user data in localStorage
+              localStorage.setItem("auth_token", data.accessToken);
+              localStorage.setItem("auth_user",JSON.stringify(this.user) // Store user data in localStorage
+              );
+            } else {
+              throw new Error("Invalid credentials");
+            }
           });
       } catch (err) {
         console.error("Login error:", err.message);
@@ -62,6 +56,6 @@ export const useAuthStore = defineStore("auth", {
       } else {
         this.isAuthenticated = false;
       }
-    }
+    },
   },
 });
